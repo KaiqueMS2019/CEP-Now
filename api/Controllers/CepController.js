@@ -1,30 +1,22 @@
-const Cep = require('../Models/Cep')
+const CepModel = require('../Models/CepModel')
 const cepPromise = require('cep-promise')
 
 class CepController {
 
     async createCep(req, res) {
+        let response = null
+        const cep = req.query.cep
+        const cachedCep = await CepModel.findOne({ cep })
 
-        const data = () =>{
-            const { cep } = req.query
-        cepPromise(cep)
-        .then(result => {
-            res.send(result)
-        })
-        .catch(console.log);
+        if (cachedCep) {
+            response = cachedCep
+        } else {
+            const cepPromiseResponse = await cepPromise(cep)
+            response = await CepModel.create(cepPromiseResponse)
         }
-        
-        await Cep.create(data, (err) => {
-            if (err) return res.status(400).json({
-                error: true,
-                message: "Erro ao tentar inserir"
-            })
+        res.send(response)
 
-            return res.status(200).json({
-                error: false,
-                message: "cep cadastrado"
-            })
-        })
+
 
 
     }

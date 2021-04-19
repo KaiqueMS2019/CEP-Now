@@ -2,7 +2,6 @@ const express = require ('express')
 const app = express()
 const PORT = 3001
 const cors = require('cors')
-const cepPromise = require('cep-promise')
 const GetCep = require ('./routers/getCep')
 const db = require('./config/db')
 
