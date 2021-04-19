@@ -2,19 +2,18 @@ const express = require ('express')
 const app = express()
 const PORT = 3001
 const cors = require('cors')
+const cepPromise = require('cep-promise')
 const GetCep = require ('./routers/getCep')
+const db = require('./config/db')
 
-GetCep(app)
+
 
 
 app.use(cors())
 
 app.listen(PORT, () => console.log(`listening on port:${PORT}`))
 
-app.get('/', (req, res) => {
-        res.send('router/getCep')
-       
-} )
+app.use('/', GetCep )
 
 app.post('/', (req, res) => {
 

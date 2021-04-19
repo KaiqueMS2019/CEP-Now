@@ -1,24 +1,9 @@
-const db = require('./db')
-const cepPromise = require('cep-promise')
+const db = require('../config/db')
+const CepController = require('../Controllers/CepController')
+const express = require('express')
+const router = express.Router()
 
-module.exports = function (app) {
-   
 
-    app.get('/', function (req, res) {
-        
-    //   let comparacao = db.collection('cep').find({$text: { $search: `${cep}` }})
-        // if (cep != comparacao) { 
-            const { cep } = req.query
-            cepPromise(cep)
-                .then(result => {
-                    res.send(result)
-                    // db.collection('cep').save(req.query)
-                })
-                .catch(console.log)
-        // }
-        // else{
+router.get('/', CepController.createCep )
 
-        // }
-        // res.render("")
-    })
-}
+module.exports = router
