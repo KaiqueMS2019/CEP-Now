@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const CepModel = mongoose.Schema({
-    cep: {type: String, required: false},
+    cep: {type: String, required: true},
     state: {type: String, required: false},
     city: {type: String, required: false},
     neighborhood: {type: String, required: false},

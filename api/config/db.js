@@ -14,10 +14,8 @@ class Connection {
             useFindAndModify: false,
         })
         .then(() => {
-            console.log("foi foi foi")
         })
         .catch( (error) =>{
-            console.log("deu ruim")
         })
     }
     

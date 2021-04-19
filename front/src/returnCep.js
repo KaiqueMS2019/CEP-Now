@@ -7,14 +7,14 @@ function returnCep({ events }) {
         <div className="container">
 
             <h1>CEP:</h1>
-            <ul>
+            <ul className="list-group">
                 {events.map(item =>
-                    <li className="list" key={item.cep}>
-                        <span>CEP: {item.cep}</span>
-                        <span>ESTADO: {item.state}</span>
-                        <span>CIDADE: {item.city}</span>
-                        <span>BAIRRO:{item.neighborhood}</span>
-                        <span>RUA: {item.street}</span>
+                    <li className="list-group-item" key={item.cep}>
+                        <strong>CEP: {item.cep}</strong>
+                        <strong>ESTADO: {item.state}</strong>
+                        <strong>CIDADE: {item.city}</strong>
+                        <strong>BAIRRO: {item.neighborhood}</strong>
+                        <strong>RUA: {item.street}</strong>
                     </li>)}
             </ul>
 

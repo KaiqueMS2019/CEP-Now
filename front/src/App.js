@@ -13,13 +13,11 @@ function App() {
 
     const formData = new FormData(e.target)
     const data = Object.fromEntries(formData)
-    console.log(data)
 
     fetch(`http://localhost:3001/?cep=${data.cep}`)
     .then(response => response.json())
     .then(data => {
       const array = convertToArray(data)
-      console.log(array)
       setEvents(array)
     })
     .catch(error => console.error)
@@ -27,13 +25,13 @@ function App() {
 
   return (
     <body>
-    <div>
+    <div className="container">
       <h1>CEP NOW</h1>
-      <form onSubmit={submitHandler} className="formCep">
-        <div>
-          <input type="text" name="cep" className="cep"/>
+      <form onSubmit={submitHandler}>
+        <div className="form-group"> 
+          <input type="text" name="cep" className="form-control"/>
         </div>
-        <button type="submit" name="getCep" className="getCep">Buscar</button>
+        <button type="submit" name="getCep" className="btn btn-primary">Buscar</button>
       </form>
       <ReturnCep events={events}/>
     </div>
