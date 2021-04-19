@@ -1,0 +1,9 @@
+.list span{
+    display: block;
+}
+.container {
+    background: white;
+    max-width: 350px;
+    min-height: 40vh;
+    padding: 2rem;
+}

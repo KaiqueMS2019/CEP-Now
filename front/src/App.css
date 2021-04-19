@@ -1,0 +1,35 @@
+body{
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  background-repeat: no-repeat;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formCep {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.cep {
+  width: 50em;
+  height: 36px;
+  font-size: 18px;
+  display: block;
+  border: 2px solid #59429d;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+}
+
+.getCep {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}
+
