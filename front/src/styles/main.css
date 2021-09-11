@@ -1,4 +1,11 @@
-.list-group-item strong{
-    display: block;
-    width: 100%;
+.list-group-item strong {
+  display: block;
+  width: 18rem;
+}
+.respCep {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

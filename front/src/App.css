@@ -1,4 +1,4 @@
-body{
+body {
   background: linear-gradient(45deg, #8e2de2, #4a00e0);
   background-repeat: no-repeat;
   min-width: 100vw;
@@ -6,9 +6,41 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  max-width: 350px;
+  min-height: 40vh;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.2);
+}
 
+.cepInput {
+  width: 20em;
+  border-radius: 10px;
+  border-color: #4776E6;
+  text-align: center;
+}
 
+.buscar{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0.4rem;
+}
 
-
+.buttonCep{
+  padding: 0.4rem;
+  background:linear-gradient(to left, #4776E6, #8e54e9) ;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 15rem;
+}

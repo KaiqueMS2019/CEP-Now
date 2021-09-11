@@ -1,10 +1,10 @@
 import React from 'react'
-import './styles/main.css'
+import '../styles/main.css'
 
 function returnCep({ events }) {
     if (!events || events.length === 0) return null
     return (
-        <div className="container">
+        <div className="respCep">
 
             <h1>CEP:</h1>
             <ul className="list-group">
